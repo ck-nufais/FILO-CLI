@@ -13,7 +13,7 @@ def Pathcheck(msg,x):
         raise SystemExit(1)
     else:
         return x
-
+# file check
 def Filecheck(x):
     x = pathlib.Path(x)
     if not x.is_file() or not x.exists():
@@ -35,6 +35,7 @@ ext = args.list
 ignore = args.ignore
 decode = {}
 
+#check if list argument are none
 if ext != None:
     with ext.open("r") as file:
         try:
