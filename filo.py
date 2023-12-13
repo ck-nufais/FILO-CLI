@@ -48,7 +48,7 @@ class Filo:
   def CopyOperation(self, dest, src, filename):
     if not os.path.exists(dest):
       os.mkdir(dest)
-    shutil.copyfile(src, (os.path.join(dest, filename)))
+    shutil.move(src, (os.path.join(dest, filename)))
 
 
   def OrganiseDir(self):
